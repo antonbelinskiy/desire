@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/libs.css">
-    <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/libs.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-    @@include('_header.html')
-    @@include('_main.html')
-    @@include('_footer.html')
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/main.min.js"></script>
-    <script src="./js/libs.min.js"></script>
+  @@include('_header.html')
+  @@include('_main.html')
+  @@include('_footer.html')
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/main.min.js"></script>
+  <script src="./js/libs.min.js"></script>
+  <script>
+    var swiper = new Swiper('.slider', {
+      effect: 'fade',
+      autoplay: {
+        delay: 8000,
+      },
+      pagination: {
+        el: '.slider__pages',
+        clickable: true,
+      },
+    });
+  </script>
 </body>
+
 </html>
