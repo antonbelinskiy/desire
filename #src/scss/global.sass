@@ -18,3 +18,14 @@ p
   text-align: center
   font-family: "MontserratBold", sans-serif
   font-size: 36px
+
+//animations
+._animation_show
+  transform: translate(0, 120%)
+  opacity: 0
+  transition: .8s
+
+._animation_show._active,
+._active ._animation_show
+  opacity: 1
+  transform: translate(0, 0)
