@@ -16,6 +16,22 @@ function testWebP(callback) {
     }
     });
 
-
-
-   
+    var swiper = new Swiper('.slider', {
+      effect: 'fade',
+      loop: true,
+      autoplay: {
+        delay: 6000,
+      },
+      pagination: {
+        el: '.slider__pages',
+        clickable: true,
+      },
+    });
+    var swiper = new Swiper('.gallery', {
+      effect: 'fade',
+      speed: 2000,
+      pagination: {
+        el: '.gallery__pages',
+        clickable: true,
+      },
+    });
