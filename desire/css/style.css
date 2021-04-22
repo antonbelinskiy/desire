@@ -66,6 +66,13 @@ body {
   font-family: 'OpenSansRegular', sans-serif;
 }
 
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #fafafa 100%);
+}
+
 .header__inner {
   position: relative;
   display: flex;
