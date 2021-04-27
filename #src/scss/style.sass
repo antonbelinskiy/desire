@@ -59,6 +59,7 @@ body
     height: 40px
     margin-right: 20px
     padding-top: 8px
+    cursor: pointer
     span
       display: block
       background-color: #000
@@ -69,6 +70,31 @@ body
       animation: headerSpans alternate-reverse infinite 1s
       &:nth-child(odd)
         animation-delay: 3s
+  &__menu__sidebar
+    position: fixed
+    left: -130%
+    top: 0
+    bottom: 0
+    z-index: 200
+    transition: .7s
+    width: 30%
+    height: 100vh
+    background-color: #fff
+    &.active
+      left: 0
+      transform: translateX(0%)
+  &__sidebar__inner
+    padding: 15px
+  &__sidebar__bg
+    display: none
+    width: 100vw
+    height: 100vh
+    background-color: rgba(#000 , .5)
+  &__sidebar__bg.active
+    cursor: pointer
+    display: block
+    position: fixed
+    top: 0
 
 @keyframes headerSpans
   0%
@@ -478,6 +504,7 @@ body
         left: 0
         bottom: 31%
     input
+      outline: none
       background-color: transparent
       border: 1px solid #6A6969
       padding: 10px 15px
@@ -495,7 +522,7 @@ body
       border-radius: 20px
       transition: .3s
       cursor: pointer
-      &:hover
+      &:hover,&:active
         background-color: #a1a1a1
   &__right
     display: flex
@@ -527,4 +554,57 @@ body
       font-size: 16px
       text-align: center
 //FOOTER
+
+//ABOUT US
+.about
+  &__intro
+    height: 400px
+    background-size: cover
+    background-repeat: no-repeat
+    overflow: hidden
+    margin-bottom: 60px
+  h1
+    font-size: 60px
+    padding-top: 140px
+  &__white__bg
+    height: 100%
+    background-color: rgba(#fff, .5)
+  &__info
+    &__title
+      text-align: left
+      max-width: 900px
+      position: relative
+      &::after,
+        position: absolute
+        content: ''
+        background-color: #979797
+        height: 2px
+        width: 350px
+        bottom: 0
+        left: 0
+    &__text
+      margin-left: 250px
+      max-width: 900px
+      p
+        padding: 10px 0
+        line-height: 27px
+        color: #5A5A5A
+        margin-bottom: 30px
+  &__details
+    &__background
+      height: 400px
+      background-size: cover
+    &__title::after
+      position: absolute
+      content: ''
+      background-color: #979797
+      height: 2px
+      width: 250px
+      bottom: 0
+      left: 34.6%
+    p
+      margin-left: 250px
+      max-width: 900px
+
+//ABOUT US
 @import "media"

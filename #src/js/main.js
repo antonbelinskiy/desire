@@ -1,25 +1,34 @@
+//menu
+$(".header__menu__btn").click(function () {
+  $(".header__menu__sidebar").toggleClass("active");
+  $(".header__sidebar__bg").toggleClass("active");
+});
+$(".header__sidebar__bg").click(function () {
+  $(".header__menu__sidebar").removeClass("active");
+  $(this).removeClass("active");
+});
+
 
 //swiper
-
-    var swiper = new Swiper('.slider', {
-      effect: 'fade',
-      loop: true,
-      autoplay: {
-        delay: 6000,
-      },
-      pagination: {
-        el: '.slider__pages',
-        clickable: true,
-      },
-    });
-    var swiper = new Swiper('.gallery', {
-      effect: 'fade',
-      speed: 2000,
-      pagination: {
-        el: '.gallery__pages',
-        clickable: true,
-      },
-    });
+var swiper = new Swiper('.slider', {
+  effect: 'fade',
+  loop: true,
+  autoplay: {
+    delay: 6000,
+  },
+  pagination: {
+    el: '.slider__pages',
+    clickable: true,
+  },
+});
+var swiper = new Swiper('.gallery', {
+  effect: 'fade',
+  speed: 2000,
+  pagination: {
+    el: '.gallery__pages',
+    clickable: true,
+  },
+});
 
 //animations
 
@@ -41,7 +50,7 @@ if (animItems.length > 0) {
       if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
         animItem.classList.add('_active');
       } else {
-        if (!animItem.classList.contains('_no_hide')){
+        if (!animItem.classList.contains('_no_hide')) {
           animItem.classList.remove('_active');
         }
       }
